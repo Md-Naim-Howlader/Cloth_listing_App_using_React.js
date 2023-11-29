@@ -33,8 +33,7 @@ const FormData = () => {
   };
 
   // submit input value
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     setClothInfo([...clothInfo, inputValue]);
     setInputValue({
       clothName: "",
@@ -48,7 +47,6 @@ const FormData = () => {
   };
   return (
     <div className="clothForm">
-      <h3>Product Info:</h3>
       <form onSubmit={handleSubmit} className="form">
         <div>
           <label htmlFor="clothName">Cloth Name:</label>
@@ -118,15 +116,15 @@ const FormData = () => {
           <p>Select Coloth Size:</p>
           <div className="clothSize" onChange={handleChange} required>
             <label htmlFor="mSize">
-              <input id="mSize" type="radio" name="size" value="M" /> M
+              <input required id="mSize" type="radio" name="size" value="M" /> M
             </label>
 
             <label htmlFor="lSize">
-              <input type="radio" name="size" id="lSize" value="L" /> L
+              <input required type="radio" name="size" id="lSize" value="L" /> L
             </label>
 
             <label htmlFor="xlSize">
-              <input id="xlSize" type="radio" name="size" value="XL" />
+              <input required id="xlSize" type="radio" name="size" value="XL" />
               XL
             </label>
           </div>
