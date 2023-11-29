@@ -48,6 +48,7 @@ const FormData = () => {
   };
   return (
     <div className="clothForm">
+      <h3>Product Info:</h3>
       <form onSubmit={handleSubmit} className="form">
         <div>
           <label htmlFor="clothName">Cloth Name:</label>
